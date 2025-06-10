@@ -110,18 +110,14 @@ const GenerateProgramPage = () => {
         setMessages((prev) => [...prev, newMessage]);
       }
     };
-    const handleError = (error: any) => {
-      setConnecting(false);
-      setCallActive(false);
-    };
-
+    
     vapi
       .on("call-start", handleCallStart)
       .on("call-end", handleCallEnd)
       .on("speech-start", handleSpeechStart)
       .on("speech-end", handleSpeechEnd)
       .on("message", handleMessage)
-      .on("error", handleError);
+      
 
     return () => {
       vapi
@@ -130,7 +126,7 @@ const GenerateProgramPage = () => {
         .off("speech-start", handleSpeechStart)
         .off("speech-end", handleSpeechEnd)
         .off("message", handleMessage)
-        .off("error", handleError);
+        
     };
   }, []);
 
@@ -152,7 +148,7 @@ const GenerateProgramPage = () => {
             user_id: user?.id,
           },
         });
-      } catch (error) {
+      } catch {
         setConnecting(false);
       }
     }
