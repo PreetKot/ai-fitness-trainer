@@ -7,8 +7,6 @@
 
 > **Transform Your Body With Advanced AI Technology** - A comprehensive fitness tracking application powered by artificial intelligence, featuring personalized workout plans, nutrition tracking, and real-time progress monitoring.
 
-![AI Fitness Trainer Screenshot](public/screenshot-for-readme.png)
-
 ## ✨ Features
 
 ### 🤖 **AI-Powered Assistant**
